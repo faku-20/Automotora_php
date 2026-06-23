@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    color: #222;
+}
+
+.login {
+    width: 360px;
+    margin: 80px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+.login h1,
+.login h2 {
+    text-align: center;
+}
+
+.barra {
+    background: #263238;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra h1,
+.barra p {
+    margin: 0;
+}
+
+.barra a {
+    color: white;
+    text-decoration: none;
+    background: #c62828;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu a,
+.boton,
+.volver,
+button {
+    display: inline-block;
+    background: #1976d2;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.volver {
+    background: #555;
+}
+
+.eliminar {
+    background: #c62828;
+}
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #e0e0e0;
+}
+
+.error {
+    background: #ffcdd2;
+    color: #b71c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ok {
+    background: #c8e6c9;
+    color: #1b5e20;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.resultado,
+.ayuda {
+    margin-top: 20px;
+    background: #eeeeee;
+    padding: 15px;
+    border-radius: 6px;
+}
