@@ -16,29 +16,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (campoVacio($marca) || campoVacio($modelo) || campoVacio($anio) || campoVacio($color) || campoVacio($kilometros) || campoVacio($precio)) {
         $error = 'Debe completar todos los campos.';
     } else if (!numeroValido($anio) || !numeroValido($kilometros) || !numeroValido($precio)) {
-        $error = 'Anio, kilometros y precio deben ser numeros.';
+        $error = 'Año, kilómetros y precio deben ser números.';
     } else {
         agregarAuto($marca, $modelo, $anio, $color, $kilometros, $precio);
-        $mensaje = 'Automovil cargado correctamente.';
+        $mensaje = 'Automóvil cargado correctamente.';
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Cargar automovil</title>
+    <title>Cargar automóvil</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
-        <h1>Cargar automovil</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <h1>Cargar automóvil</h1>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
         <a class="volver" href="principalAdministrador.php">Volver</a>
-        <h2>Datos del automovil</h2>
+        <h2>Datos del automóvil</h2>
 
         <?php if ($mensaje != '') { ?>
             <p class="ok"><?php echo $mensaje; ?></p>
@@ -55,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label>Modelo</label>
             <input type="text" name="modelo" required>
 
-            <label>Anio</label>
+            <label>Año</label>
             <input type="number" name="anio" min="1900" required>
 
             <label>Color</label>
             <input type="text" name="color" required>
 
-            <label>Kilometros</label>
+            <label>Kilómetros</label>
             <input type="number" name="kilometros" min="0" required>
 
             <label>Precio</label>
@@ -71,4 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </body>
+
 </html>

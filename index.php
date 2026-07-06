@@ -18,15 +18,17 @@ if (isset($_GET['error'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Automotora - Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="login">
         <h1>Automotora</h1>
-        <h2>Inicio de sesion</h2>
+        <h2>Inicio de sesión</h2>
 
         <?php if ($error != '') { ?>
             <p class="error"><?php echo $error; ?></p>
@@ -36,7 +38,7 @@ if (isset($_GET['error'])) {
             <label>Usuario</label>
             <input type="text" name="usuario" required>
 
-            <label>Contrasena</label>
+            <label>Contraseña</label>
             <input type="password" name="contrasena" required>
 
             <button type="submit">Entrar</button>
@@ -48,4 +50,5 @@ if (isset($_GET['error'])) {
         </div>
     </div>
 </body>
+
 </html>

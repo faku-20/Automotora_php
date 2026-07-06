@@ -26,15 +26,17 @@ if (esAdministrador()) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Modificar perfil</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
         <h1>Modificar perfil</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
@@ -59,11 +61,12 @@ if (esAdministrador()) {
             <label>Apellido</label>
             <input type="text" name="apellido" value="<?php echo $_SESSION['apellido']; ?>" required>
 
-            <label>Nueva contrasena</label>
-            <input type="password" name="contrasena" placeholder="Dejar vacio para no cambiar">
+            <label>Nueva contraseña</label>
+            <input type="password" name="contrasena" placeholder="Dejar vacío para no cambiar">
 
             <button type="submit">Guardar cambios</button>
         </form>
     </div>
 </body>
+
 </html>

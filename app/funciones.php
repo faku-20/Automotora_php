@@ -37,7 +37,7 @@ function esComprador()
 function protegerPagina()
 {
     if (!estaLogueado()) {
-        header('Location: ../index.php?error=Debe%20iniciar%20sesion');
+        header('Location: ../index.php?error=Debe%20iniciar%20sesión');
         exit();
     }
 }
@@ -171,4 +171,3 @@ function numeroValido($valor)
 
     return false;
 }
-?>

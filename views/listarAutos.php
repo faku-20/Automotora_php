@@ -11,24 +11,26 @@ if (isset($_GET['mensaje'])) {
 
 if (esAdministrador()) {
     $volver = 'principalAdministrador.php';
-    $titulo = 'Listado de automoviles';
+    $titulo = 'Listado de automóviles';
 } else {
     $volver = 'principalComprador.php';
-    $titulo = 'Catalogo de automoviles';
+    $titulo = 'Catálogo de automóviles';
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Automoviles</title>
+    <title>Automóviles</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 </head>
+
 <body>
     <div class="barra">
         <h1><?php echo $titulo; ?></h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
@@ -39,18 +41,18 @@ if (esAdministrador()) {
         <?php } ?>
 
         <?php if (count($autos) == 0) { ?>
-            <p>No hay automoviles cargados.</p>
+            <p>No hay automóviles cargados.</p>
         <?php } else { ?>
             <table>
                 <tr>
                     <th>ID</th>
                     <th>Marca</th>
                     <th>Modelo</th>
-                    <th>Anio</th>
+                    <th>Año</th>
                     <th>Color</th>
-                    <th>Kilometros</th>
+                    <th>Kilómetros</th>
                     <th>Precio</th>
-                    <th>Accion</th>
+                    <th>Acción</th>
                 </tr>
 
                 <?php foreach ($autos as $auto) { ?>
@@ -76,4 +78,5 @@ if (esAdministrador()) {
         <?php } ?>
     </div>
 </body>
+
 </html>

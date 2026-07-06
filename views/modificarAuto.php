@@ -17,7 +17,7 @@ if (isset($_POST['id'])) {
 $auto = obtenerAutoPorId($id);
 
 if ($auto == null) {
-    $error = 'No se encontro el automovil.';
+    $error = 'No se encontró el automóvil.';
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
@@ -31,25 +31,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
     if (campoVacio($marca) || campoVacio($modelo) || campoVacio($anio) || campoVacio($color) || campoVacio($kilometros) || campoVacio($precio)) {
         $error = 'Debe completar todos los campos.';
     } else if (!numeroValido($anio) || !numeroValido($kilometros) || !numeroValido($precio)) {
-        $error = 'Anio, kilometros y precio deben ser numeros.';
+        $error = 'Año, kilómetros y precio deben ser números.';
     } else {
         modificarAuto($id, $marca, $modelo, $anio, $color, $kilometros, $precio);
         $auto = obtenerAutoPorId($id);
-        $mensaje = 'Automovil modificado correctamente.';
+        $mensaje = 'Automóvil modificado correctamente.';
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Modificar automovil</title>
+    <title>Modificar automóvil</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
-        <h1>Modificar automovil</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <h1>Modificar automóvil</h1>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
@@ -74,13 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
                 <label>Modelo</label>
                 <input type="text" name="modelo" value="<?php echo $auto['modelo']; ?>" required>
 
-                <label>Anio</label>
+                <label>Año</label>
                 <input type="number" name="anio" value="<?php echo $auto['anio']; ?>" min="1900" required>
 
                 <label>Color</label>
                 <input type="text" name="color" value="<?php echo $auto['color']; ?>" required>
 
-                <label>Kilometros</label>
+                <label>Kilómetros</label>
                 <input type="number" name="kilometros" value="<?php echo $auto['kilometros']; ?>" min="0" required>
 
                 <label>Precio</label>
@@ -91,4 +93,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
         <?php } ?>
     </div>
 </body>
+
 </html>

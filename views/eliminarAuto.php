@@ -12,24 +12,26 @@ if (isset($_GET['id'])) {
 $auto = obtenerAutoPorId($id);
 
 if ($auto == null) {
-    $error = 'No se encontro el automovil.';
+    $error = 'No se encontró el automóvil.';
 } else {
     eliminarAuto($id);
-    header('Location: listarAutos.php?mensaje=Automovil%20eliminado%20correctamente');
+    header('Location: listarAutos.php?mensaje=Automóvil%20eliminado%20correctamente');
     exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Eliminar automovil</title>
+    <title>Eliminar automóvil</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
-        <h1>Eliminar automovil</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <h1>Eliminar automóvil</h1>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
@@ -37,4 +39,5 @@ if ($auto == null) {
         <p class="error"><?php echo $error; ?></p>
     </div>
 </body>
+
 </html>

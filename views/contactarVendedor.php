@@ -28,27 +28,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar'])) {
     $comentario = limpiar($_POST['comentario']);
 
     if (campoVacio($nombre) || campoVacio($telefono)) {
-        $error = 'Debe completar nombre y telefono.';
+        $error = 'Debe completar nombre y teléfono.';
     } else {
-        $mensaje = 'Solicitud enviada. Un vendedor se comunicara contigo.';
+        $mensaje = 'Solicitud enviada. Un vendedor se comunicará contigo.';
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Contactar vendedor</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
         <h1>Contactar vendedor</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
-        <a class="volver" href="listarAutos.php">Volver al catalogo</a>
+        <a class="volver" href="listarAutos.php">Volver al catálogo</a>
 
         <?php if ($mensaje != '') { ?>
             <p class="ok"><?php echo $mensaje; ?></p>
@@ -59,10 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar'])) {
         <?php } ?>
 
         <?php if ($auto == null) { ?>
-            <p class="error">No se recibieron datos de la simulacion.</p>
+            <p class="error">No se recibieron datos de la simulación.</p>
         <?php } else { ?>
             <h2>Resumen</h2>
-            <p><strong>Automovil:</strong> <?php echo $auto['marca'] . ' ' . $auto['modelo']; ?></p>
+            <p><strong>Automóvil:</strong> <?php echo $auto['marca'] . ' ' . $auto['modelo']; ?></p>
             <p><strong>Entrega:</strong> $<?php echo $entrega; ?></p>
             <p><strong>Cuotas:</strong> <?php echo $cuotas; ?></p>
 
@@ -74,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar'])) {
                 <label>Nombre</label>
                 <input type="text" name="nombre" value="<?php echo $_SESSION['nombre']; ?>" required>
 
-                <label>Telefono</label>
+                <label>Teléfono</label>
                 <input type="text" name="telefono" required>
 
                 <label>Comentario</label>
@@ -85,4 +87,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar'])) {
         <?php } ?>
     </div>
 </body>
+
 </html>

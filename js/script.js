@@ -1,3 +1,3 @@
 function confirmarEliminar() {
-    return confirm('Estas seguro de eliminar este automovil?');
+    return confirm('¿Estás seguro de eliminar este automóvil?');
 }

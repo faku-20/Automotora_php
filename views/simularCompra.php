@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
     $cuotas = $_POST['cuotas'];
 
     if (!numeroValido($entrega) || !numeroValido($cuotas)) {
-        $error = 'Los datos deben ser numericos.';
+        $error = 'Los datos deben ser numéricos.';
     } else if ($entrega >= $auto['precio']) {
-        $error = 'La entrega inicial debe ser menor al precio del automovil.';
+        $error = 'La entrega inicial debe ser menor al precio del automóvil.';
     } else if ($cuotas <= 0) {
         $error = 'La cantidad de cuotas debe ser mayor a cero.';
     } else {
@@ -39,22 +39,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Simular compra</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="barra">
         <h1>Simular compra</h1>
-        <a href="../app/logout.php">Cerrar sesion</a>
+        <a href="../app/logout.php">Cerrar sesión</a>
     </div>
 
     <div class="contenedor">
         <a class="volver" href="listarAutos.php">Volver</a>
 
         <?php if ($auto == null) { ?>
-            <p class="error">Debe elegir un automovil del catalogo.</p>
+            <p class="error">Debe elegir un automóvil del catálogo.</p>
         <?php } else { ?>
             <h2><?php echo $auto['marca'] . ' ' . $auto['modelo']; ?></h2>
             <p><strong>Precio:</strong> $<?php echo $auto['precio']; ?></p>
@@ -72,7 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
                 <label>Cantidad de cuotas</label>
                 <select name="cuotas">
                     <?php for ($i = 1; $i <= 60; $i++) { ?>
-                        <option value="<?php echo $i; ?>" <?php if ($i == $cuotas) { echo 'selected'; } ?>>
+                        <option value="<?php echo $i; ?>" <?php if ($i == $cuotas) {
+                                                                echo 'selected';
+                                                            } ?>>
                             <?php echo $i; ?>
                         </option>
                     <?php } ?>
@@ -83,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
 
             <?php if ($resultado == true) { ?>
                 <div class="resultado">
-                    <h3>Resultado de la simulacion</h3>
-                    <p>Precio del automovil: $<?php echo $auto['precio']; ?></p>
+                    <h3>Resultado de la simulación</h3>
+                    <p>Precio del automóvil: $<?php echo $auto['precio']; ?></p>
                     <p>Entrega inicial: $<?php echo $entrega; ?></p>
                     <p>Saldo restante: $<?php echo $saldo; ?></p>
                     <p>Cantidad de cuotas: <?php echo $cuotas; ?></p>
@@ -101,4 +105,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
         <?php } ?>
     </div>
 </body>
+
 </html>

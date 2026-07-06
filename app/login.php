@@ -26,11 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
     } else {
-        header('Location: ../index.php?error=Usuario%20o%20contrasena%20incorrectos');
+        header('Location: ../index.php?error=Usuario%20o%20contraseña%20incorrectos');
         exit();
     }
 } else {
     header('Location: ../index.php');
     exit();
 }
-?>
