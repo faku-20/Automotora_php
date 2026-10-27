@@ -3,10 +3,10 @@ require_once 'app/funciones.php';
 
 if (estaLogueado()) {
     if (esAdministrador()) {
-        header('Location: views/principalAdministrador.php');
+        header('Location: views/administrador/principal.php');
         exit();
     } else {
-        header('Location: views/principalComprador.php');
+        header('Location: views/comprador/principal.php');
         exit();
     }
 }
@@ -22,7 +22,7 @@ if (isset($_GET['error'])) {
 <head>
     <meta charset="UTF-8">
     <title>Automotora - Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@ if (isset($_GET['error'])) {
             <p class="error"><?php echo $error; ?></p>
         <?php } ?>
 
-        <form method="POST" action="app/login.php">
+        <form method="POST" action="views/usuarios/login.php">
             <label>Usuario</label>
             <input type="text" name="usuario" required>
 

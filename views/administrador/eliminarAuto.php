@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerAdministrador();
 
 $id = 0;
@@ -25,7 +25,7 @@ if ($auto == null) {
 <head>
     <meta charset="UTF-8">
     <title>Eliminar automóvil</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 
 <body>

@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerComprador();
 
 $id = 0;
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
 <head>
     <meta charset="UTF-8">
     <title>Simular compra</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 
 <body>

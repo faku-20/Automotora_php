@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerPagina();
 
 $mensaje = '';
@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if (esAdministrador()) {
-    $volver = 'principalAdministrador.php';
+    $volver = '../administrador/principal.php';
 } else {
-    $volver = 'principalComprador.php';
+    $volver = '../comprador/principal.php';
 }
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if (esAdministrador()) {
 <head>
     <meta charset="UTF-8">
     <title>Modificar perfil</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 
 <body>

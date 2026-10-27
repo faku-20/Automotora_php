@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerAdministrador();
 
 $id = 0;
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $auto != null) {
 <head>
     <meta charset="UTF-8">
     <title>Modificar automóvil</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 
 <body>

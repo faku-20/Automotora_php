@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerAdministrador();
 
 $mensaje = '';
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Cargar automóvil</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <div class="contenedor">
-        <a class="volver" href="principalAdministrador.php">Volver</a>
+        <a class="volver" href="principal.php">Volver</a>
         <h2>Datos del automóvil</h2>
 
         <?php if ($mensaje != '') { ?>

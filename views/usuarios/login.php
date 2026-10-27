@@ -1,12 +1,12 @@
 <?php
-require_once 'funciones.php';
+require_once '../../app/funciones.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = limpiar($_POST['usuario']);
     $contrasena = $_POST['contrasena'];
 
     if ($usuario == '' || $contrasena == '') {
-        header('Location: ../index.php?error=Complete%20todos%20los%20campos');
+        header('Location: ../../index.php?error=Complete%20todos%20los%20campos');
         exit();
     }
 
@@ -19,10 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['tipo'] = $datos['tipo'];
 
         if ($datos['tipo'] == 'administrador') {
-            header('Location: ../views/principalAdministrador.php');
+            header('Location: ../administrador/principal.php');
             exit();
         } else {
-            header('Location: ../views/principalComprador.php');
+            header('Location: ../comprador/principal.php');
             exit();
         }
     } else {
@@ -30,6 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 } else {
-    header('Location: ../index.php');
+    header('Location: ../../index.php');
     exit();
 }

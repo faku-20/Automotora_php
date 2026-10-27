@@ -1,5 +1,5 @@
 <?php
-require_once '../app/funciones.php';
+require_once '../../app/funciones.php';
 protegerPagina();
 
 $autos = obtenerAutos();
@@ -10,10 +10,10 @@ if (isset($_GET['mensaje'])) {
 }
 
 if (esAdministrador()) {
-    $volver = 'principalAdministrador.php';
+    $volver = 'principal.php';
     $titulo = 'Listado de automóviles';
 } else {
-    $volver = 'principalComprador.php';
+    $volver = '../comprador/principal.php';
     $titulo = 'Catálogo de automóviles';
 }
 ?>
@@ -23,8 +23,8 @@ if (esAdministrador()) {
 <head>
     <meta charset="UTF-8">
     <title>Automóviles</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <script src="../../public/js/script.js"></script>
 </head>
 
 <body>
